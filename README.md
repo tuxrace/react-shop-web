@@ -1,9 +1,9 @@
-# React shop web
+# 🛒 React shop web
 
 Online shopping app
 
 ### Demo
-
+https://tuxrace.github.io/react-shop-web/
 
 ## Install
 
@@ -22,3 +22,4 @@ npm run test -- --coverage
 - Typescript
 - Sass
 - ClassTransformer
+- Jest
