@@ -71,7 +71,7 @@ const Cart: React.FC<Props> = (props) => {
     return (
         <div className="cartRoot">
             <Grid container className="" justify="center" direction="column" spacing={3}>
-                <Grid item> SHOPPING CART</Grid>
+                <Grid item container justify="center"> <Typography>SHOPPING CART</Typography> </Grid>
                 <Grid item> 
                         <Table className="tableCart">
                             <TableHead>

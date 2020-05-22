@@ -16,7 +16,11 @@ const Main  = () => {
 
     useEffect(() => {
         async function getData (){
-            const response = await axios.get(API_URL).then((result: AxiosResponse) => {
+            let protocol = 'http://';
+            if (window.location.protocol === "https:") {
+                protocol = "https://";
+            }
+            const response = await axios.get(`${protocol}${API_URL}`).then((result: AxiosResponse) => {
                 const { data } = result.data;
                 return plainToClass(Product, data as Object[]);
             });

@@ -45,7 +45,6 @@ describe('Main', () => {
 
     test('rendered Main', async () =>{
         axios.get.mockImplementationOnce(() => Promise.resolve({data: data}));
-
         const { container } = render(<Main {...props}/>);
         expect(container).toBeDefined();
     })
