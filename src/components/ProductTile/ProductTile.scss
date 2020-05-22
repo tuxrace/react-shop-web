@@ -1,0 +1,21 @@
+.productTileRoot {        
+    img {
+        border: #D3D3D3 10px solid;
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+    .productTileBottom {
+        margin: 8px 0;
+    }
+    .productTileNamePrice {
+        flex-grow: 1;
+    }
+    .buttonAddCart {
+        height: 32px;
+        background-color: #EAA972;
+        color: #fff;
+        cursor: pointer;
+    }
+}
+    

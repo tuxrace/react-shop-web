@@ -1,0 +1,14 @@
+.mainRoot {
+    max-width: 1280px;
+    margin: 0 auto;
+    // width: 1360px;
+    // border: 1px solid;
+    padding-top: 40px;
+    .tileHero{
+        justify-content: center;
+    }
+    .divider{
+        margin-top: 24px;
+        border: #D3D3D3 2px solid;
+    }
+}
