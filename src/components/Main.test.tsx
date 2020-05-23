@@ -2,8 +2,13 @@ import React from 'react'
 import Main from './Main';
 import { render } from '@testing-library/react';
 import axios from 'axios';
+import { API_URL } from '../constants';
 
 jest.mock('axios');
+
+// mock window.location
+delete window.location;
+window.location = new URL(`https://${API_URL}`)
 
 describe('Main', () => {
     const props = {
@@ -42,8 +47,9 @@ describe('Main', () => {
           }
         ]
       }
-
+    
     test('rendered Main', async () =>{
+        
         axios.get.mockImplementationOnce(() => Promise.resolve({data: data}));
         const { container } = render(<Main {...props}/>);
         expect(container).toBeDefined();
