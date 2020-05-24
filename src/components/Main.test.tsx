@@ -1,8 +1,10 @@
 import React from 'react'
 import Main from './Main';
-import { render } from '@testing-library/react';
+import { render, cleanup } from '@testing-library/react';
 import axios from 'axios';
 import { API_URL } from '../constants';
+import '@testing-library/jest-dom';
+import '@testing-library/jest-dom/extend-expect'
 
 jest.mock('axios');
 
@@ -11,6 +13,7 @@ delete window.location;
 window.location = new URL(`https://${API_URL}`)
 
 describe('Main', () => {
+    afterEach(cleanup)
     const props = {
     }
     const data = {
@@ -48,10 +51,11 @@ describe('Main', () => {
         ]
       }
     
-    test('rendered Main', async () =>{
-        
-        axios.get.mockImplementationOnce(() => Promise.resolve({data: data}));
-        const { container } = render(<Main {...props}/>);
-        expect(container).toBeDefined();
+    test('rendered Main', async () => {
+
+        axios.get.mockResolvedValue({ data: data });
+        const { container, getByText, debug } = render(<Main {...props}/>);
+        expect(getByText('SHOPPING CART')).toBeInTheDocument();
+        debug();
     })
 });
