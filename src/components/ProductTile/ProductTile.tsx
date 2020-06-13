@@ -22,7 +22,7 @@ const ProductTile: React.FC<Props> = (props) => {
                     <Typography variant="body1" className="productName"><strong>{data.getName().toUpperCase()}</strong></Typography>
                     <Typography variant="body1">{`${data.getCurrency()} ${parseFloat(data.getPrice()).toFixed(2)}`}</Typography>
                 </div>
-                <button data-testid={`button-addCart-${data.getName()}`} onClick={onHandleClick} className="buttonAddCart"> ADD TO CART </button>
+                <button name={`button-addCart-${data.getName()}`} data-testid={`button-addCart-${data.getName()}`} onClick={onHandleClick} className="buttonAddCart"> ADD TO CART </button>
             </Grid>
         </Grid>
     )

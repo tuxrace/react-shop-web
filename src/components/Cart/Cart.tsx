@@ -50,7 +50,6 @@ const Cart: React.FC<Props> = (props) => {
     const onHandleRemove = (id: string) => {
         const newItemTotal = itemTotal;
         delete newItemTotal[id];
-        console.log(newItemTotal)
         setItemTotal(newItemTotal);
         handleRemove(id);
     }
@@ -100,7 +99,7 @@ const Cart: React.FC<Props> = (props) => {
                                 <TableCell component="th" scope="row">
                                     <input data-testid={`qty-${idx}`} id={item.getName()} type="text" className="inputQuantity" onChange={handleQuantityChange}></input>
                                 </TableCell>
-                                <TableCell component="th" scope="row">
+                                <TableCell component="th" scope="row" data-testid={`price-${idx}`} >
                                     {itemTotal[item.getName()]}
                                 </TableCell>
                                 </TableRow>

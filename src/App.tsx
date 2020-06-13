@@ -1,12 +1,13 @@
-import React, { Fragment } from 'react';
+import React from 'react';
+import { LoaderProvider } from './components/Loader';
 import './App.css';
 import Main from './components/Main';
 
 function App() {
   return (
-   <Fragment>
+   <LoaderProvider>
      <Main />
-   </Fragment>
+   </LoaderProvider>
   );
 }
 
