@@ -1,6 +1,6 @@
 # 🛒 React shop web
 
-Online shopping app
+> Online shopping app
 
 ### Demo
 https://tuxrace.github.io/react-shop-web/
