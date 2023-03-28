@@ -5,14 +5,14 @@
 ### Demo
 https://tuxrace.github.io/react-shop-web/
 
-## Install
+## Install.
 
 ```bash
 npm install
 npm start
 ```
 
-## Run Test
+## Run Test.
 ```bash
 npm run test -- --coverage
 ```
